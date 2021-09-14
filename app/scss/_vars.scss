@@ -11,27 +11,11 @@ $silver-600:  #C1C1C1;
 $silver-100:  #F6F6F6;
 $white:       #FFFFFF;
 
-%lato-400 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-}
+$font-Lato: 'Lato', sans-serif;
+$font-Signika: 'Signika', sans-serif;
 
-%lato-600 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 600;
-}
-
-%lato-700 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-}
-
-%signika-600 {
-  font-family: 'Signika', sans-serif;
-  font-weight: 600;
-}
-
-%signika-700 {
-  font-family: 'Signika', sans-serif;
-  font-weight: 700;
-}
+$xl: 1200;
+$lg: 992;
+$md: 768;
+$sm: 576;
+$xs: 375;
