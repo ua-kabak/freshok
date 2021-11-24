@@ -1,0 +1,47 @@
+.products-filter {
+  @include r ($xs) {
+    margin-bottom: 24px;
+  }
+
+
+  font-family: $font-Lato;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+
+  @include r ($md) {
+    margin-bottom: 20px;
+  }
+
+  @include r ($sm) {
+    flex-wrap: wrap;
+    margin-left: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
+
+  & .mixitup-control-active {
+    color: $green-900;
+  }
+
+
+  &__btn {
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    transition: border 0.4s;
+
+    &:hover {
+      border-bottom: 3px solid #E0EDCF;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}

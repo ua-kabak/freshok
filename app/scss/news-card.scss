@@ -1,0 +1,51 @@
+.news-card {
+  &__box {
+    position: relative;
+  }
+
+  &__data {
+    position: absolute;
+    top: 0;
+    text-transform: uppercase;
+    padding-top: 18px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 65px;
+    background-color: $white;
+    border-radius: 0 0 4px 4px;
+    margin-left: 20px;
+  }
+
+  &__month {
+    display: block;
+    font-size: 10px;
+    line-height: 1.2;
+    font-family: $font-Lato;
+    font-weight: 700;
+    padding-bottom: 6px;
+  }
+
+  &__num {
+    display: block;
+    font-size: 30px;
+    line-height: 1;
+    font-family: $font-Lato;
+    font-weight: 600;
+  }
+
+  &__heading {
+    @include line-clamp(18, 1.4, 5);
+    font-size: 18px;
+    letter-spacing: normal;
+    max-width: 378px;
+    transition: color 0.4s;
+
+    &:hover {
+      color: $green-900;
+    }
+  }
+
+  &__text {
+    padding: 18px;
+  }
+}

@@ -1,0 +1,390 @@
+.product-card {
+  &.product-card--list {
+    width: 466px;
+    height: fit-content;
+
+    .product-card__img {
+      width: 200px;
+      height: 145px;
+      margin: 9px 0;
+    }
+
+    .product-card__content {
+      width: 100%;
+      padding: 12px 18px;
+      height: auto;
+    }
+
+    .product-card__addition {
+      top: 11px;
+    }
+
+    .product-card__box {
+      display: flex;
+    }
+
+    .product-card__heading {
+      margin-top: 29px;
+    }
+
+    .product-card__button-heart {
+      top: 57px;
+      right: -447px;
+    }
+
+    .product-card__heading {
+      width: 178px;
+    }
+
+    .badge {
+      top: 6px;
+      left: 6px;
+
+      &--sale {
+        top: 28px;
+        width: max-content;
+      }
+    }
+
+  }
+
+  &--promo {
+    .product-card {
+      &__content {
+        width: 188px;
+        height: 125px;
+        padding: 12px 12px 12px 0;
+      }
+
+      &__bottom {
+        flex-direction: column;
+      }
+
+      &__offers {
+        display: flex;
+      }
+
+      &__price {
+        font-size: 20px;
+        margin-right: 12px;
+
+        &--old {
+          margin-top: auto;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    @include r ($sm) {
+      width: 170px;
+      height: 120px;
+    }
+  }
+
+  &__heading {
+    @include line-clamp(14, 1.3, 3);
+  }
+
+  &__top {
+    position: relative;
+    padding-bottom: 57px;
+  }
+
+  &__badge {
+    position: absolute;
+    display: block;
+    padding: 3px 6px;
+    top: 12px;
+    left: 12px;
+    text-transform: uppercase;
+    color: $white;
+    font-family: $font-Lato;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1;
+    border-radius: 6px;
+    background-color: $green-900;
+  }
+
+  .badge {
+    &--sale {
+      top: 34px;
+      background-color: $red-900;
+    }
+
+    &--top {
+      top: 12px;
+    }
+
+    &--hidden {
+      display: none;
+    }
+
+    &--hit {
+      background-color: $orange-900;
+    }
+  }
+
+  &__button-heart {
+    position: absolute;
+    top: 17px;
+    right: 12px;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__heart {
+    transition: fill 0.4s;
+
+    &:hover {
+      fill: $yellow-900;
+    }
+  }
+
+  &__content {
+    position: relative;
+    height: 137px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include r ($xs) {
+      height: 166px;
+      padding: 12px;
+      padding-top: 18px;
+    }
+  }
+
+  &__addition {
+    position: absolute;
+    top: 0;
+    right: 18px;
+    left: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include r ($xs) {
+      right: 12px;
+      left: 12px;
+    }
+  }
+
+  &__offers {
+    line-height: 1;
+    font-family: $font-Lato;
+    font-weight: 400;
+  }
+
+  &__price {
+
+    &--old {
+      width: max-content;
+      display: block;
+      font-family: $font-Lato;
+      font-weight: 400;
+      color: $silver-600;
+      position: relative;
+      margin-bottom: 3px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $silver-600;
+        transform: rotate(-14deg);
+      }
+    }
+
+    &--hidden {
+      height: 14px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__basket {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    background-color: $green-900;
+    border-radius: 3px;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__column {
+    position: relative;
+    padding: 12px;
+  }
+
+  &__status {
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 1;
+    color: $green-900;
+    margin-bottom: 5px;
+
+    &--end {
+      color: $red-900;
+    }
+
+    &--absent {
+      color: $silver-600;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__currency {
+    font-size: 12px;
+  }
+
+  &__rating {
+    font-family: $font-Lato;
+    font-weight: 700;
+    width: 40px;
+    line-height: 1;
+    margin-right: 3px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icon/star.svg');
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+      top: -1px;
+      right: -1px;
+    }
+  }
+
+  &--cart {
+    .product-card {
+      &__inner {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 12px;
+        position: relative;
+
+        @include r ($xs) {
+          flex-direction: column;
+          align-items: normal;
+          padding: 12px 16px 12px 15px;
+        }
+      }
+
+      &__delete {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+      }
+
+      &__img {
+        margin-right: 32px;
+        width: 60px;
+        height: 60px;
+
+        @include r ($xs) {
+          margin-right: 12px;
+        }
+      }
+
+      &__content {
+        padding: 6px 12px 6px 0;
+        display: flex;
+        flex-direction: column;
+        width: 170px;
+        height: 72px;
+      }
+
+      &__counter {
+        display: flex;
+        text-align: center;
+        margin-right: 12px;
+      }
+
+      &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $green-900;
+        width: 24px;
+        height: 24px;
+      }
+
+      &__num {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $dark-500;
+        width: 36px;
+        height: 24px;
+        font-family: $font-Lato;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1;
+        background-color: $green-200;
+      }
+
+      &__offers {
+        width: 336px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__price {
+        display: block;
+        font-family: $font-Lato;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1;
+        color: $dark-500;
+      }
+
+      &__top {
+        display: flex;
+        padding: 0;
+        margin: 0;
+
+        @include r ($xs) {
+          margin-bottom: 18px;
+        }
+      }
+
+      &__row {
+        @include r ($xs) {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      &__currency {
+        &--finish {
+          display: inline-block;
+          margin-left: -5px;
+        }
+      }
+    }
+  }
+}

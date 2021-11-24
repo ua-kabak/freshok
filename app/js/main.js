@@ -1,5 +1,49 @@
 $(function () {
 
+  $('.select-style').styler();
+
+  $('.shop-content__filter-btn').on('click', function () {
+    $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
+    $(this).addClass('shop-content__filter-btn--active');
+  })
+
+  $('.button-list').on('click', function () {
+    $('.product-card').addClass('product-card--list');
+  });
+
+  $('.button-grid').on('click', function () {
+    $('.product-card').removeClass('product-card--list');
+  });
+
+  $('.button-list').on('click', function () {
+    $('.shop-content__item').addClass('shop-content__item--list');
+  });
+
+  $('.button-grid').on('click', function () {
+    $('.shop-content__item').removeClass('shop-content__item--list');
+  });
+
+  $('.button-list').on('click', function () {
+    $('.shop-content__list').addClass('shop-content__list--active');
+  });
+
+  $('.button-grid').on('click', function () {
+    $('.shop-content__list').removeClass('shop-content__list--active');
+  });
+
+  $(".shop__price-input").ionRangeSlider({
+    type: "double",
+    onStart: function (data) {
+        $('.shop__price-from').text(data.from);
+        $('.shop__price-to').text(data.to);
+      },
+      onChange: function (data) {
+        $('.shop__price-from').text(data.from);
+        $('.shop__price-to').text(data.to);
+      },
+  });
+
+
   $('.slider-top__list').slick({
     dots: false,
     fade: true,
@@ -16,7 +60,7 @@ $(function () {
       }
     ], */
 
-    /* Подскажи как мне решить проблему, у меня при выполнении этого breakpoint пропадает фоновая картинка, item присваиваются какие-то свойства и все ламается, не */
+    /* Подскажи как мне решить проблему, у меня при выполнении этого breakpoint пропадает фоновая картинка, item присваиваются какие-то свойства и все ломается */
   })
 
 
@@ -32,6 +76,22 @@ $(function () {
   $('.form__icon').on('click', function () {
     $('.form__icon').toggleClass('form__icon--active');
     $('.form__box').toggleClass('form__box--active');
+  });
+
+  $('.catalog').on('click', function () {
+    $('.catalog').toggleClass('catalog--active');
+    $('.catalog__list').toggleClass('catalog__list--active');
+  });
+
+  $('.shop-content__filter-mobile').on('click', function () {
+    $('.shop__filters').toggleClass('shop__filters--active');
+/*     $('.shop-content__item').toggleClass('shop-content__item--active'); */
+    $('.main').toggleClass('main--active');
+  });
+
+  $('.filter__btn').on('click', function () {
+    $('.shop__filters').toggleClass('shop__filters--active');
+    $('.main').toggleClass('main--active');
   });
 
   $(".logo").on("click", function (e) {

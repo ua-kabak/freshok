@@ -1,0 +1,89 @@
+.top-products {
+  margin: 72px 0;
+  background-color: $white;
+
+  @include r ($lg) {
+    margin: 48px 0;
+  }
+
+  @include r ($sm) {
+    margin: 30px 0;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__button {
+    display: block;
+    width: fit-content;
+    color: $green-900;
+    padding: 10px 23px;
+    background-color: $white;
+    border: 1px solid $green-900;
+    margin: 0 auto;
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+    }
+
+    &:hover {
+      background-color: $green-100;
+    }
+
+    &:active {
+      color: rgba(99, 166, 14, 0.5);
+      box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px 10px;
+    margin-bottom: 48px;
+
+    @include r ($xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include r ($lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r ($sm) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    @include r ($xs) {
+      grid-gap: 5px;
+    }
+  }
+
+  &__item {
+    background-color: $white;
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid rgba(17, 17, 17, 0.2);
+    border-radius: 6px;
+    transition: border-color 0.4s;
+
+    &.top-products__item--list {
+      max-width: 466px;
+    }
+
+    @include r ($xl) {
+      margin: 0 auto;
+    }
+
+    @include r ($xs) {
+      height: 344px;
+    }
+
+    &:hover {
+      border-color: $green-900;
+    }
+  }
+}
