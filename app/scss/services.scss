@@ -1,0 +1,100 @@
+.services {
+  padding: 48px 0;
+  position: relative;
+  background-color: $silver-100;
+
+  @include r ($lg) {
+    padding: 40px 0;
+  }
+
+  @include r ($sm) {
+    padding: 30px 0;
+  }
+
+  @include r ($xs) {
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $silver-600;
+      top: 14px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    @include r ($lg) {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 275px;
+
+    &:not(:last-child) {
+      margin-right: 110px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 0;
+      left: -75px;
+    }
+
+    &--delivery {
+      &::after {
+        background-image: url('../images/icon/delivery-action.svg');
+      }
+    }
+
+    &--return {
+      &::after {
+        background-image: url('../images/icon/return.svg');
+      }
+    }
+
+    &--time {
+      &::after {
+        background-image: url('../images/icon/24-hours.svg');
+      }
+    }
+
+    @include r ($lg) {
+      max-width: 345px;
+      width: 100%;
+      padding-left: 84px;
+
+      &:after {
+        left: 15px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__title {
+    @include line-clamp(16, 1.4, 3);
+    font-size: 16px;
+    font-family: $font-Lato;
+    font-weight: 700;
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    @include line-clamp(14, 1, 3);
+    color: $dark-500;
+    font-family: $font-Lato;
+    font-weight: 400;
+  }
+}

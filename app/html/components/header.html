@@ -357,11 +357,11 @@
 
 
           <form class="form header__form" action="#">
-            <a class="form__icon" href="#">
+            <span class="form__icon">
               <svg class="form__img" width="20" height="20" fill="#fff">
                 <use xlink:href="images/sprite.svg#search-white"></use>
               </svg>
-            </a>
+            </span>
             <div class="form__box">
               <label class="sr-only" for="search">поиск по сайту</label>
               <input class="form__search form__search--desktop" type="search" name="search" id="search"
@@ -404,9 +404,9 @@
 
           <div class="cart">
             <div class="cart__box">
-              <h4 class="cart__title">
+              <h2 class="cart__title">
                 Корзина
-              </h4>
+              </h2>
               <a class="cart__link" href="#">
                 очистить корзину
               </a>
@@ -420,10 +420,9 @@
                   <article class="product-card product-card--cart">
                     <a class="product-card__link" href="#">
                       <div class="product-card__inner">
-                        <a class="product-card__delete" href="#">
-                          <img class="product-card__img-delete" src="images/icon/delete.svg" alt="удалить" width="12"
-                            height="12">
-                        </a>
+                        <svg class="product-card__delete" width="12" height="12" fill="#c1c1c1">
+                          <use xlink:href="images/sprite.svg#delete"></use>
+                        </svg>
                         <div class="product-card__top">
                           <img class="product-card__img" src="images/cart/1.jpg" width="60" height="60" alt="Ананас">
                           <div class="product-card__content">
@@ -439,11 +438,15 @@
                           <div class="product-card__row">
                             <div class="product-card__counter">
                               <button class="product-card__button" type="button">
-                                <img src="images/icon/minus.svg" alt="минус" class="product-card__icon">
+                                <svg width="16" height="16" fill="#fff">
+                                  <use xlink:href="images/sprite.svg#minus"></use>
+                                </svg>
                               </button>
                               <span class="product-card__num">2</span>
                               <button class="product-card__button" type="button">
-                                <img src="images/icon/plus.svg" alt="плюс" class="product-card__icon">
+                                <svg width="16" height="16" fill="#fff">
+                                  <use xlink:href="images/sprite.svg#plus"></use>
+                                </svg>
                               </button>
                             </div>
                             <span class="product-card__price product-card__price--finish">
@@ -460,10 +463,9 @@
                   <article class="product-card product-card--cart">
                     <a class="product-card__link" href="#">
                       <div class="product-card__inner">
-                        <a class="product-card__delete" href="#">
-                          <img class="product-card__img-delete" src="images/icon/delete.svg" alt="удалить" width="12"
-                            height="12">
-                        </a>
+                        <svg class="product-card__delete" width="12" height="12" fill="#c1c1c1">
+                          <use xlink:href="images/sprite.svg#delete"></use>
+                        </svg>
                         <div class="product-card__top">
                           <img class="product-card__img" src="images/cart/2.jpg" width="60" height="60" alt="Питахайя">
                           <div class="product-card__content">
@@ -479,11 +481,15 @@
                           <div class="product-card__row">
                             <div class="product-card__counter">
                               <button class="product-card__button" type="button">
-                                <img src="images/icon/minus.svg" alt="минус" class="product-card__icon">
+                                <svg width="16" height="16" fill="#fff">
+                                  <use xlink:href="images/sprite.svg#minus"></use>
+                                </svg>
                               </button>
                               <span class="product-card__num">2</span>
                               <button class="product-card__button" type="button">
-                                <img src="images/icon/plus.svg" alt="плюс" class="product-card__icon">
+                                <svg width="16" height="16" fill="#fff">
+                                  <use xlink:href="images/sprite.svg#plus"></use>
+                                </svg>
                               </button>
                             </div>
                             <span class="product-card__price product-card__price--finish">
@@ -500,9 +506,9 @@
 
               <div class="cart__bottom">
                 <div class="cart__bottom-box">
-                  <h4 class="cart__heading">
+                  <h3 class="cart__heading">
                     Товаров на сумму
-                  </h4>
+                  </h3>
                   <span class="cart__sum">
                     2038<span class="cart__currency">₽</span>
                   </span>

@@ -1,0 +1,180 @@
+.form {
+  display: flex;
+  max-width: 576px;
+  position: relative;
+  z-index: 120;
+
+  @include r ($lg) {
+    margin-right: 10px;
+  }
+
+  @include r ($md) {
+    position: static;
+    border-radius: 0;
+  }
+
+  &__icon {
+    display: block;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    position: absolute;
+    top: 3px;
+    margin-right: 30px;
+    left: 2px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.4s;
+
+
+    @include r ($md) {
+      top: -18px;
+      left: -10px;
+      display: contents;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      &--active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  &__img {
+    fill: #000;
+    margin: 10px;
+    transition: opacity 0.4s linear,
+      background-color 0.5s ease-in-out,
+      border-radius 0.4s;
+
+    @include r ($md) {
+      width: 24px;
+      height: 24px;
+      fill: $white;
+    }
+  }
+
+  &__search {
+    display: block;
+    width: 420px;
+    background-color: $white;
+    color: $dark-800;
+    font-family: $font-Lato;
+    font-weight: 400;
+    padding: 15px 50px 15px 50px;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    transition: background-color 0.4s;
+
+    &:focus {
+      background-color: #E0EDCF;
+    }
+
+    &--mobile {
+      display: none;
+    }
+
+    @include r ($xl) {
+      width: 320px;
+    }
+
+    @include r ($lg) {
+      width: 220px;
+
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+      }
+    }
+
+    @include r ($md) {
+      width: 100%;
+      border-radius: 0;
+    }
+
+    @include r ($xs) {
+      padding: 14px 45px;
+    }
+  }
+
+  &__button {
+    font-size: 14px;
+    background-color: $dark-800;
+    text-transform: uppercase;
+    padding: 15px 52px;
+    border-radius: 0 6px 6px 0;
+
+    &:focus {
+      background-color: #31352B;
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+    }
+
+    &:hover {
+      background-color: rgba(49, 53, 43, 0.85);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.5);
+      background-color: #31352B;
+    }
+
+    @include r ($xl) {
+      padding: 15px 32px;
+    }
+
+    @include r ($md) {
+      border-radius: 0;
+      padding: 15px 45px;
+    }
+
+    @include r ($xs) {
+      padding: 15px 36px;
+    }
+  }
+
+  &__box {
+    display: flex;
+
+    @include r ($md) {
+      transform: translateY(-600%);
+      position: absolute;
+      right: 0;
+      top: 56px;
+      left: 0;
+      transition: transform 0.6s;
+
+      &:before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/icon/search.svg);
+        width: 20px;
+        height: 20px;
+        top: 15px;
+        left: 13px;
+      }
+
+      &--active {
+        transform: translateY(77%);
+
+        @include r ($sm) {
+          transform: translateY(46%);
+        }
+      }
+    }
+
+    @include r ($md) {
+      border: 1px solid #31352B;
+    }
+
+    @include r ($xs) {
+      max-width: 375px;
+    }
+  }
+}
