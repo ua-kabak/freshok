@@ -162,10 +162,12 @@
           font-size: 18px;
           text-align: normal;
           max-width: 300px;
+          display: flex;
+          justify-content: center;
 
           &:before {
             top: 14px;
-            left: 40px;
+            left: 44px;
           }
         }
       }
