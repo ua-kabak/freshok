@@ -92,41 +92,6 @@
     padding-bottom: 57px;
   }
 
-  &__badge {
-    position: absolute;
-    display: block;
-    padding: 3px 6px;
-    top: 12px;
-    left: 12px;
-    text-transform: uppercase;
-    color: $white;
-    font-family: $font-Lato;
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 1;
-    border-radius: 6px;
-    background-color: $green-900;
-  }
-
-  .badge {
-    &--sale {
-      top: 34px;
-      background-color: $red-900;
-    }
-
-    &--top {
-      top: 12px;
-    }
-
-    &--hidden {
-      display: none;
-    }
-
-    &--hit {
-      background-color: $orange-900;
-    }
-  }
-
   &__button-heart {
     position: absolute;
     top: 17px;
@@ -386,5 +351,38 @@
         }
       }
     }
+  }
+}
+
+.badge {
+  position: absolute;
+  display: block;
+  padding: 3px 6px;
+  top: 12px;
+  left: 12px;
+  text-transform: uppercase;
+  color: $white;
+  font-family: $font-Lato;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1;
+  border-radius: 6px;
+  background-color: $green-900;
+
+  &--sale {
+    top: 34px;
+    background-color: $red-900;
+  }
+
+  &--top {
+    top: 12px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &--hit {
+    background-color: $orange-900;
   }
 }

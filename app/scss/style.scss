@@ -61,6 +61,842 @@
 /* ----- Страничка магазина ----- */
 @import 'shop-page';
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-item {
+  margin-bottom: 63px;
+
+  @include r ($lg) {
+    margin-bottom: 30px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    @include r ($lg) {
+      display: block;
+    }
+  }
+
+  &__slide {
+    width: 630px;
+    margin-right: 31px;
+
+    @include r ($lg) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    @include r ($md) {
+      width: 470px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    @include r ($sm) {
+      width: 345px;
+    }
+
+    @include r ($xs) {
+      width: 345px;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__slider {
+    border: 1px solid $silver-600;
+    border-radius: 4px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__picture {
+    margin: 69px 105px;
+
+    @include r ($md) {
+      width: 380px;
+      height: 380px;
+      margin: 30px 65px;
+    }
+
+    /* @include r ($sm) {
+      width: 380px;
+      height: 380px;
+      margin: 30px 65px;
+    } */
+
+    @include r ($sm) {
+      width: 270px;
+      height: 270px;
+      margin: 19px 37px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    line-height: 1.2;
+    text-transform: none;
+
+    &--mobile {
+      display: none;
+    }
+
+    @include r ($lg) {
+      margin-bottom: 30px;
+
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+      }
+    }
+
+    @include r ($sm) {
+      font-size: 30px;
+    }
+
+    @include r ($xs) {
+      font-size: 26px;
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    padding: 6px 9px;
+    color: $white;
+    background-color: $orange-900;
+    border-radius: 6px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include r ($xs) {
+      flex-direction: column;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__box-top {
+    display: flex;
+    align-items: center;
+
+    @include r ($xs) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__code-product {
+    padding: 4px 5px;
+    background-color: $silver-100;
+    background-repeat: 3px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $silver-600;
+    margin-right: 12px;
+  }
+
+  &__status {
+    text-transform: uppercase;
+    color: $green-900;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: auto;
+
+    @include r ($xs) {
+      margin-left: 0;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 60px;
+
+    @include r ($md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__old-price {
+    position: relative;
+    font-size: 20px;
+    color: $silver-600;
+    margin-right: 18px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $silver-600;
+      transform: rotate(-12deg);
+    }
+  }
+
+  &__new-price {
+    color: $green-900;
+    font-size: 30px;
+  }
+
+  &__bottom {
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  &__counter {
+    display: flex;
+    text-align: center;
+    margin-right: 18px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $green-900;
+    width: 44px;
+    height: 44px;
+
+    &:first-child {
+      border-radius: 3px 0 0 3px;
+    }
+
+    &:last-child {
+      border-radius: 0 3px 3px 0;
+    }
+  }
+
+  &__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $dark-500;
+    width: 70px;
+    height: 44px;
+    font-family: $font-Lato;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    background-color: $green-200;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1;
+    padding-left: 49px;
+    position: relative;
+    padding: 14px 10px 10px 49px;
+
+    @include r ($xl) {
+      width: 48px;
+      height: 44px;
+      padding: 0;
+
+      &--text {
+        display: none;
+      }
+    }
+  }
+
+  &__cart {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+  }
+
+  &__button-heart {
+    display: block;
+    margin-left: auto;
+  }
+
+  &__heart {
+    transition: fill 0.4s;
+
+    &:hover {
+      fill: $yellow-900;
+    }
+  }
+
+  &__list {
+    margin-bottom: 18px;
+  }
+
+  &__heading {
+    font-family: $font-Signika;
+    font-weight: 600;
+    color: $dark-900;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding-bottom: 18px;
+    border-bottom: 1px solid $silver-600;
+    margin-bottom: 18px;
+  }
+
+  &__element {
+    font-weight: 400;
+    line-height: 1.6;
+    color: $dark-500;
+  }
+
+  &__info {
+    font-weight: 400;
+    line-height: 1.2;
+    color: $green-900;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .slick-prev {
+    left: 22px;
+  }
+
+  .slick-next {
+    right: 22px;
+  }
+}
+
+
+.product-tabs {
+  margin-bottom: 72px;
+  border-top: 1px solid $silver-600;
+
+  @include r ($xs) {
+    margin-bottom: 48px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+
+
+
+    @include r ($lg) {
+      justify-content: space-between;
+    }
+
+    @include r ($xs) {
+      margin-bottom: 30px;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 120px;
+
+      @include r ($lg) {
+        margin-right: 0px;
+      }
+
+      @include r ($xs) {
+        margin-right: 18px;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    font-family: $font-Signika;
+    font-weight: 600;
+    color: $dark-900;
+    font-size: 18px;
+    line-height: 1.3;
+    padding-top: 18px;
+
+    &--active {
+      color: $green-900;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: $green-900;
+        height: 3px;
+        width: 100%;
+        top: -1px;
+      }
+    }
+
+    @include r ($sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__content-item {
+    display: none;
+    max-width: 690px;
+    width: 100%;
+    margin: 0 auto;
+
+    &--active {
+      display: block;
+    }
+  }
+
+}
+
+.description {
+  &__text {
+    font-family: $font-Lato;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.characteristic {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    font-family: $font-Lato;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  &__text-another {
+    font-family: $font-Lato;
+    font-weight: 400;
+  }
+}
+
+.comments {
+  &__title {
+    margin-bottom: 48px;
+    font-size: 18px;
+    line-height: 1.2;
+
+    @include r ($xs) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 72px;
+
+    @include r ($xs) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    padding-bottom: 24px;
+    border-bottom: 1px solid $silver-600;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__img {
+    margin-right: 24px;
+  }
+
+  &__user-name {
+    font-family: $font-Lato;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  &__user-date {
+    font-family: $font-Lato;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: $dark-400;
+  }
+
+  &__rating {
+    margin-left: auto;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: $dark-500;
+  }
+}
+
+.comments-form {
+  &__inner {
+    display: flex;
+    margin-bottom: 28px;
+
+    @include r ($md) {
+      display: block;
+    }
+  }
+
+  &__box-rating {
+    display: flex;
+  }
+
+  &__radio {
+    @extend %radio-hidden;
+  }
+
+  &__label {
+    display: block;
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+
+    &--rating {
+      margin-right: 18px;
+    }
+  }
+
+  &__textarea {
+    font-family: $font-Lato;
+    font-weight: 400;
+    color: $silver-600;
+    font-size: 14px;
+    line-height: 1.3;
+    width: 400px;
+    height: 165px;
+    resize: none;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    padding: 18px;
+    margin-right: 30px;
+
+    &:focus {
+      outline-color: $green-900;
+    }
+
+    @include r ($md) {
+      margin-bottom: 18px;
+      margin-right: 0;
+    }
+
+    @include r ($sm) {
+      width: 345px;
+      height: 165px;
+    }
+  }
+
+  &__input {
+    font-family: $font-Lato;
+    font-weight: 400;
+    color: $silver-600;
+    font-size: 14px;
+    line-height: 1.3;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    padding: 17px 18px;
+    width: 260px;
+
+    @include r ($xs) {
+      width: 345px;
+
+      &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    &:focus {
+      outline-color: $green-900;
+    }
+  }
+
+  &__label-checkbox {
+    display: block;
+    color: $dark-500;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+
+  &__checkbox {
+    @extend %checkbox-hidden;
+
+    &:checked+.comments-form__checkbox-box {
+      border-color: $green-900;
+      background-image: url('../images/icon/check-mark.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      box-shadow: 0 0 0 2px #E0EDCF;
+    }
+  }
+
+  &__checkbox-box {
+    display: block;
+    max-width: 24px;
+    width: 100%;
+    height: 24px;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    margin-right: 12px;
+  }
+}
+
+.recent {
+  margin-bottom: 72px;
+
+  @include r ($xs) {
+    margin-bottom: 76px;
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 60px;
+
+    @include r ($xs) {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    background-color: $white;
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid rgba(17, 17, 17, 0.2);
+    border-radius: 6px;
+    transition: border-color 0.4s;
+
+    &:hover {
+      border-color: $green-900;
+    }
+
+    @include r ($xs) {
+      max-width: 170px;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: -80px;
+    border: 1px solid $silver-600;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    z-index: 10;
+    padding: 14px 20px;
+    transform: translateY(-50%);
+  }
+
+  .slick-prev {
+    right: 90px;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  @include r ($xs) {
+    .slick-dots {
+      position: absolute;
+      display: flex;
+      bottom: -38px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      li {
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        width: 10px;
+        height: 10px;
+        border: 1px solid $silver-600;
+        border-radius: 50%;
+
+        &:not(:last-child) {
+          margin-right: 12px;
+        }
+      }
+
+      .slick-active {
+        background-color: $green-900;
+        border-color: $green-900
+      }
+    }
+  }
+}
+
+.slick-lightbox-inner {
+  position: relative;
+  top: 54px;
+  left: 96px;
+  width: 90%;
+  height: 90%;
+  background-color: $white;
+  border-radius: 15px;
+
+  @include r ($xs) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+
+    @include r ($xs) {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 6px;
+    }
+  }
+
+  .slick-prev {
+    background-image: url('../images/icon/arrow-left.svg');
+
+    @include r ($xs) {
+      left: 0;
+    }
+  }
+
+  .slick-next {
+    background-image: url('../images/icon/arrow-right.svg');
+
+    @include r ($xs) {
+      right: 0;
+    }
+  }
+
+  .slick-lightbox-close {
+    margin-top: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icon/x.svg');
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .slick-lightbox-slick-img {
+    width: 750px;
+    height: 750px;
+    margin: 0 auto;
+
+    @include r ($lg) {
+      max-width: 750px;
+      max-height: 750px;
+    }
+
+    @include r ($xs) {
+      width: 360px;
+      height: 360px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ----- Footer ----- */
 @import 'footer';
 
